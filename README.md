@@ -48,6 +48,11 @@
 5. **Opening the Web Interface**:
    - The script automatically opens the HUB interface in the user's default web browser.
 
+### Printer Setup
+- **Same Network Requirement**: All printers must be connected to the same network to be detected.
+- **Local Software Service**: Each printer runs a local service that allows communication.
+- **Hotspot 2.0 Compatibility**: The system works over Hotspot 2.0 but requires a stable 2.4GHz Wi-Fi network.
+
 ### Installation
 1. Ensure you have Python installed.
 2. Install required dependencies:
@@ -67,6 +72,7 @@ Your app will start and automatically open in your browser at `http://localhost:
 - If the script doesn't open the browser, try manually visiting `http://localhost:5000`.
 - Ensure `app.py` is correctly configured and executable.
 - Check that the scanned ports are within an active range.
+- Make sure all printers are on the same 2.4GHz network.
 
 </details>
 
