@@ -1,4 +1,5 @@
 <div align="justify">
+
 <!-- Profile -->
 <p align="right"><strong><samp><img src = "https://i.pinimg.com/originals/43/3a/88/433a885903b5e6b6b9b5edf681169882.gif" alt="sakura" width="200" height="200"></samp></strong></p>
   <p align="center">
@@ -9,7 +10,7 @@
         🚀 A simple Python utility to manage a local web-based application.
       </b>
       <br>
-        <img src="https://readme-typing-svg.herokuapp.com?font=fira+code&weight=800&size=19&duration=1000&pause=500&color=8C02F7&center=true&vCenter=true&multiline=true&width=600&height=120&lines=This+script+ensures+your+server+is+running;It+automatically+terminates+processes+on+port+5000;Then+it+starts+the+application+and+opens+it+in+your+browser" alt="Typing SVG" />
+        <img src="https://readme-typing-svg.herokuapp.com?font=fira+code&weight=800&size=19&duration=1000&pause=500&color=8C02F7&center=true&vCenter=true&multiline=true&width=600&height=120&lines=This+script+ensures+your+server+is+running;It+automatically+terminates+processes+on+port+5000;Then+it+starts+the+application+and+opens+it+in+your+browser;Scans+port+range+for+available+machines;Identifies+machines+by+MAC+address+and+adds+them+to+the+HUB" alt="Typing SVG" />
       <br>
     </samp>
   </p>
@@ -24,6 +25,28 @@
 - **Checks if port 5000 is in use**: Prevents conflicts by closing any process using the port.
 - **Automatically starts `app.py`**: Ensures your web application runs smoothly.
 - **Opens the app in your default browser**: Saves you time from manually launching it.
+- **Scans a range of ports**: Identifies available machines within a specified range.
+- **Detects machines using MAC addresses**: Links machines with active responses (HTTP 200) to the HUB.
+
+### How It Works
+1. **Port Check and Termination**:
+   - The script scans for active processes using port 5000.
+   - If a process is found, it terminates it to free the port.
+
+2. **Starting the Application**:
+   - It launches `app.py` as a background process.
+   - The script waits a few seconds to ensure the server starts correctly.
+
+3. **Scanning for Available Machines**:
+   - It iterates through a predefined port range.
+   - For each port, it sends a request and checks for a valid HTTP 200 response.
+
+4. **Identifying Machines by MAC Address**:
+   - When a valid machine is found, its MAC address is retrieved.
+   - The MAC address is used as a unique identifier to add the machine to the HUB.
+
+5. **Opening the Web Interface**:
+   - The script automatically opens the HUB interface in the user's default web browser.
 
 ### Installation
 1. Ensure you have Python installed.
@@ -43,6 +66,7 @@ Your app will start and automatically open in your browser at `http://localhost:
 ### Troubleshooting
 - If the script doesn't open the browser, try manually visiting `http://localhost:5000`.
 - Ensure `app.py` is correctly configured and executable.
+- Check that the scanned ports are within an active range.
 
 </details>
 
